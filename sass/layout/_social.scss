@@ -1,0 +1,37 @@
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: var(--main-anim);
+  }
+  &__icons {
+    transition: var(--main-anim);
+  }
+}
+.social-list__icons--team{
+    fill: #afb1b8;
+}
+.social-list__icons--footer {
+fill: #ffffff;
+}
+.social-list__link--footer {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social-list__link:hover,
+.social-list__link:focus {
+  background: var(--accent-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.social-list__link:hover .social-list__icons,
+.social-list__link:focus .social-list__icons {
+  fill: var(--secondary-color);
+}

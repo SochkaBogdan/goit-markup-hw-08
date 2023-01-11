@@ -1,0 +1,47 @@
+.header-nav {
+  &__list {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    gap: 50px;
+  }
+  &__item {
+    color: var(--main-color);
+    list-style: none;
+    position: relative;
+    padding: 30px 0 30px;
+  }
+  &__item a {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+  &__item a:hover {
+    color: var(--accent-color);
+  }
+  &__item a:focus {
+    color: var(--accent-color);
+  }
+  &__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.header-nav__link--current {
+  transition: var(--main-anim);
+  color: var(--accent-color);
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    opacity: 1;
+    background-color: var(--accent-color);
+  }
+}

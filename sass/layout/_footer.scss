@@ -1,0 +1,111 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: var(--secondary-bg-color);
+}
+
+.footer-contacts {
+  margin-right: 70px;
+
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  &__address {
+    color: var(--secondary-color);
+    font-style: normal;
+    margin-bottom: 9px;
+    cursor: pointer;
+    transition: var(--main-anim);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+  &__contact {
+    display: block;
+    margin-bottom: 9px;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    transition: var(--main-anim);
+    -webkit-transition: var(--main-anim);
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+}
+.footer-social--position {
+  margin-right: 93px;
+}
+.footer-nav {
+  display: flex;
+  align-items: baseline;
+}
+.footer-tittle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.footer-tittle--position {
+  margin-bottom: 20px;
+}
+
+.footer-mail {
+  display: flex;
+  gap: 12px;
+  &__mail {
+    justify-content: center;
+    width: 358px;
+    height: 50px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    padding-left: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: var(--secondary-color);
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background: #2196f3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-color: transparent;
+    align-items: center;
+    color: var(--secondary-color);
+    transition: var(--main-anim);
+    &:hover {
+      border: #188ce8;
+      background: #188ce8;
+    }
+  }
+  &__button-txt {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    margin-right: 10px;
+  }
+  &__button-icon {
+    fill: var(--secondary-color);
+  }
+}
