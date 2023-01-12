@@ -1,6 +1,7 @@
 .header {
   border-bottom: 1px solid #ececec;
   &__content {
+    align-items: center;
     height: 79px;
     display: flex;
   }
@@ -9,11 +10,22 @@
     display: flex;
     align-items: center;
   }
+
   &__contact-list {
     align-items: center;
     display: flex;
     gap: 30px;
+
+     @media (max-width: 1199px) {
+      display: inline-block;
+      text-align: left;
+    }
+
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
+
   &__contacts {
     gap: 10px;
     display: flex;
@@ -25,7 +37,6 @@
     }
   }
   &__contact-list &__contacts {
-    justify-content: end;
     list-style: none;
     font-style: normal;
     font-weight: 500;
@@ -53,4 +64,22 @@
 .header__contact-list .header__contacts:hover .header__icon,
 .header__contact-list .header__contacts:focus .header__icon {
   fill: var(--accent-color);
+}
+
+.header {
+  // .header__burger-btn
+
+  &__burger-btn {
+    padding: 12px 8px;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
 }
