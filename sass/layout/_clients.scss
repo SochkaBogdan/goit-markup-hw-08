@@ -2,11 +2,12 @@
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
 .clients-list {
+
   display: flex;
   gap: 30px;
-}
-.clients-list {
+  flex-wrap: wrap;
   // .clients-list__card
 
   &__card {
@@ -16,6 +17,17 @@
     &:hover {
       border: 1px solid #2196f3;
     }
+
+    @media (max-width: 767px) {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+    @media (min-width: 768px) {
+      flex-basis: calc((100% - 60px) / 3);
+    }
+    @media (min-width: 1200px) {
+      flex-basis: calc((100% - 150px) / 6);
+    }
+
   }
 
   // .clients-list__link
@@ -24,7 +36,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 168px;
     height: 92px;
     transition: var(--main-anim);
   }

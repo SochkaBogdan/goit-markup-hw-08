@@ -14,7 +14,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet" />
-  <link href="./css/style.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
@@ -62,15 +61,17 @@
   <main>
     <!--Хіро блок-->
     <section class="hero">
-      <h1 class="hero__tittle">Ефективні рішення для вашого бізнесу</h1>
-      <button type="button" class="hero__button" data-modal-open>Замовити послугу</button>
+      <div class="hero__content container">
+        <h1 class="hero__tittle">Ефективні рішення для вашого бізнесу</h1>
+        <button type="button" class="hero__button" data-modal-open>Замовити послугу</button>
+      </div>
     </section>
     <!--Наші переваги-->
     <section class="about">
-      <div class="about-content container">
+      <div class="about__content container">
         <h2 class="about__tittle">Benefits</h2>
         <ul class="about__list">
-          <li>
+          <li class="about__list-items">
             <div class="about__icons">
               <svg class="about__icon" width="70" height="70">
                 <use href="./images/icons.svg#icon-antenna-1"></use>
@@ -82,7 +83,7 @@
               формування позиції.
             </p>
           </li>
-          <li>
+          <li class="about__list-items">
             <div class="about__icons">
               <svg class="about__icon" width="70" height="70">
                 <use href="./images/icons.svg#icon-clock-1"></use>
@@ -94,7 +95,7 @@
               тягне у себе.
             </p>
           </li>
-          <li>
+          <li class="about__list-items">
             <div class="about__icons">
               <svg class="about__icon" width="70" height="70">
                 <use href="./images/icons.svg#icon-diagram-1"></use>
@@ -105,7 +106,7 @@
               Так само консультація з широким активом значною мірою зумовлює.
             </p>
           </li>
-          <li>
+          <li class="about__list-items">
             <div class="about__icons">
               <svg class="about__icon" width="70" height="70">
                 <use href="./images/icons.svg#icon-astronaut-1"></use>
@@ -158,7 +159,7 @@
         <h2 class="main-tittle main__tittle--position">Наша команда</h2>
         <ul class="team-list list">
           <li class="team-list__card">
-            <img src="./images/team1.jpg" alt="Ігор Дем'яненко" width="270" />
+            <img src="./images/team1.jpg" alt="Ігор Дем'яненко" width="100%" />
             <div class="team-list__box">
               <h3 class="team-list__sub-tittle">Ігор Дем'яненко</h3>
               <p class="team-list__work">Product Designer</p>
@@ -203,7 +204,7 @@
             </div>
           </li>
           <li class="team-list__card">
-            <img src="./images/team2.jpg" alt="Ольга Рєпіна" width="270" />
+            <img src="./images/team2.jpg" alt="Ольга Рєпіна" width="100%" />
             <div class="team-list__box">
               <h3 class="team-list__sub-tittle">Ольга Рєпіна</h3>
               <p class="team-list__work">Frontend Developer</p>
@@ -250,7 +251,7 @@
             </div>
           </li>
           <li class="team-list__card">
-            <img src="./images/team3.jpg" alt="Микола Тарасов" width="270" />
+            <img src="./images/team3.jpg" alt="Микола Тарасов" width="100%" />
             <div class="team-list__box">
               <h3 class="team-list__sub-tittle">Микола Тарасов</h3>
               <p class="team-list__work">Marketing</p>
@@ -297,7 +298,7 @@
             </div>
           </li>
           <li class="team-list__card">
-            <img src="./images/team4.jpg" alt="Михайло Єрмаков" width="270" />
+            <img src="./images/team4.jpg" alt="Михайло Єрмаков" width="100%" />
             <div class="team-list__box">
               <h3 class="team-list__sub-tittle">Михайло Єрмаков</h3>
               <p class="team-list__work">UI Designer</p>
@@ -458,18 +459,18 @@
           </li>
         </ul>
       </div>
-      <form>
-        <h2 class="footer-tittle footer-tittle--position">Підпишіться на розсилку</h2>
-        <label for="mailfooter"></label>
+      <form class="footer-form">
         <div class="footer-mail">
+          <h2 class="footer-tittle">Підпишіться на розсилку</h2>
+          <label for="mailfooter"></label>
           <input class="footer-mail__mail" type="email" id="mailfooter" name="mailfooter" placeholder="E-mail">
-          <button class="footer-mail__button button" type="submit">
-            <span class="footer-mail__button-txt">Підписатися</span>
-            <svg class="footer-mail__button-icon" width="24" height="24">
-              <use href="./images/icons.svg#icon-icon-send"></use>
-            </svg>
-          </button>
         </div>
+        <button class="footer-mail__button button" type="submit">
+          <span class="footer-mail__button-txt">Підписатися</span>
+          <svg class="footer-mail__button-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-icon-send"></use>
+          </svg>
+        </button>
       </form>
     </div>
   </footer>
@@ -527,8 +528,8 @@
       </form>
     </div>
   </div>
-  <div class="mobile-menu js-menu-container  container">
-    <div class="mobile-menu__box">
+  <div class="mobile-menu js-menu-container">
+    <div class="mobile-menu__box  container">
       <div class="mobile-menu__header">
         <button class="mobile-menu__close js-close-menu" type="button">
           <svg class="mobile-menu__close-icon" width="40" height="40">

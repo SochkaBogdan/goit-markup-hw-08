@@ -6,6 +6,12 @@
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--color-black);
+
+  @media (max-width: 767px) {
+    font-size: 24px;
+    padding: 16px 0;
+    line-height: 1.1667;
+  }
 }
 
 .logo__item {
@@ -16,8 +22,13 @@
   margin-right: 91px;
 }
 
-.logo--footer{
+.logo--footer {
+  text-align: center;
   display: block;
- margin-bottom: 20px;
+  margin-bottom: 20px;
   color: var(--secondary-color);
+
+  @media (min-width: 1200px){
+    text-align: start;
+  }
 }

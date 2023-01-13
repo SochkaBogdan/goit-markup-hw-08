@@ -1,16 +1,14 @@
 .header-nav {
-
-    // @media screen and (min-width: 768px) {
-    //   display: none;
-    // }
-
+  // @media screen and (min-width: 768px) {
+  //   display: none;
+  // }
 
   &__list {
     padding: 0px;
     margin: 0px;
     display: flex;
     gap: 50px;
-        @media (min-width: 768px) {
+    @media (min-width: 768px) {
       display: flex;
     }
     @media (max-width: 767px) {
@@ -18,8 +16,8 @@
     }
   }
 
-  &__contact-list{
-     @media (min-width: 768px) {
+  &__contact-list {
+    @media (min-width: 768px) {
       flex-direction: column;
     }
   }

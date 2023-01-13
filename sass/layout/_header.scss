@@ -2,8 +2,10 @@
   border-bottom: 1px solid #ececec;
   &__content {
     align-items: center;
-    height: 79px;
     display: flex;
+    @media (min-width: 768px) {
+      height: 79px;
+    }
   }
   &__box {
     flex: 1 1 auto;
@@ -16,13 +18,21 @@
     display: flex;
     gap: 30px;
 
-     @media (max-width: 1199px) {
+    @media (max-width: 1199px) {
       display: inline-block;
       text-align: left;
     }
 
     @media (max-width: 767px) {
       display: none;
+    }
+  }
+  &__item {
+    @media (max-width: 1199px) {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
