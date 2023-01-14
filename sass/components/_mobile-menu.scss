@@ -139,6 +139,11 @@
     letter-spacing: 0.02em;
     color: var(--accent-color);
     
+
+@media (max-width: 479px){
+  font-size: 13px;
+}
+
   }
 }
 

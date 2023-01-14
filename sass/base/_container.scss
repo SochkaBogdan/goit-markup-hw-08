@@ -1,9 +1,9 @@
 .container {
   width: 100%;
   padding: 0px 15px;
+  margin: 0 auto;
   
   @media  (min-width: 480px) {
-    margin: 0 auto;
     width: 480px;
   }
   @media  (min-width: 768px) {

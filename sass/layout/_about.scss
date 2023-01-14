@@ -1,7 +1,11 @@
 .about {
-  display: block;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
+
+  @media (min-width: 1200px){
+    padding: 94px 0;
+  }
+  
+
 
   &__tittle {
     opacity: 0;
