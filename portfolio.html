@@ -30,7 +30,7 @@
               <a class="header-nav__link" href="./index.html">Студія</a>
             </li>
             <li class="header-nav__item">
-              <a class="header-nav__link header-nav__link--current" href="./portfolio.html">Портфоліо</a>
+              <a class="header-nav__link  header-nav__link--current" href="./portfolio.html">Портфоліо</a>
             </li>
             <li class="header-nav__item">
               <a class="header-nav__link" href="">Контакти</a>
@@ -41,17 +41,23 @@
       <ul class="header__contact-list list">
         <li class="header__item">
           <a href="mailto:info@devstudio.com" class="header__contacts">
-            <svg class="header__icon" width="16" height="12">
+            <svg class="header__icon header__icon--email" width="14" height="10">
               <use href="./images/icons.svg#icon-envelope"></use>
             </svg>
             info@devstudio.com</a>
         </li>
         <li class="header__item">
-          <a href="tel:+380961111111" class="header__contacts"><svg class="header__icon" width="10" height="16">
+          <a href="tel:+380961111111" class="header__contacts">
+            <svg class="header__icon header__icon--tel" width="10" height="14">
               <use href="./images/icons.svg#icon-smartphone"></use>
             </svg>+38 096 111 11 11</a>
         </li>
       </ul>
+      <button class="header__burger-btn js-open-menu">
+        <svg class="header__burger-icon" width="24" height="16">
+          <use href="./images/icons.svg#icon-burger"></use>
+        </svg>
+      </button>
     </div>
   </header>
   <main>
@@ -222,7 +228,7 @@
         </address>
       </div>
       <div class="footer-social footer-social--position">
-        <h2 class="footer-tittle footer-tittle--position">приєднуйтесь</h2>
+        <h3 class="footer-tittle">приєднуйтесь</h3>
         <ul class="social-list list">
           <li>
             <a class="social-list__link social-list__link--footer" href="https://www.instagram.com/"
@@ -263,17 +269,16 @@
         </ul>
       </div>
       <form class="footer-form">
+        <h3 class="footer-tittle">Підпишіться на розсилку</h3>
         <div class="footer-mail">
-          <h2 class="footer-tittle">Підпишіться на розсилку</h2>
-          <label for="mailfooter"></label>
           <input class="footer-mail__mail" type="email" id="mailfooter" name="mailfooter" placeholder="E-mail">
+          <button class="footer-mail__button button" type="submit">
+            <span class="footer-mail__button-txt">Підписатися</span>
+            <svg class="footer-mail__button-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-icon-send"></use>
+            </svg>
+          </button>
         </div>
-        <button class="footer-mail__button button" type="submit">
-          <span class="footer-mail__button-txt">Підписатися</span>
-          <svg class="footer-mail__button-icon" width="24" height="24">
-            <use href="./images/icons.svg#icon-icon-send"></use>
-          </svg>
-        </button>
       </form>
     </div>
   </footer>

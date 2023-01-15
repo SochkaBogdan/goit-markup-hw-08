@@ -22,7 +22,11 @@
     color: var(--main-color);
     border: transparent;
     border-radius: 4px;
-    transition: var(--main-anim);
+    transition: color var(--main-anim), box-shadow var(--main-anim),
+      background-color var(--main-anim);
+
+    transition-property: color, box-shadow, background-color;
+
     &:hover {
       background-color: var(--accent-color);
       color: var(--secondary-color);
@@ -56,13 +60,6 @@
 
   &__link {
     display: block;
-
-    &:hover,
-    &:focus {
-      display: block;
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    }
   }
   &__img {
     position: relative;
@@ -107,15 +104,19 @@
     font-size: 18px;
     line-height: 1.55;
     letter-spacing: 0.03em;
+    transition: transform var(--slow-anim), box-shadow var(--slow-anim);
+    transition-property: transform, opacity;
   }
 }
-.offer-card__box:hover .offer-card__overlay {
-  opacity: 1;
-  transform: translateY(0);
-  transition: var(--slow-anim), opacity var(--slow-anim);
-}
 
-// .offer-card__link:hover{
-//     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-//       1px 4px 6px rgba(0, 0, 0, 0.16);
-// }
+.offer-card__link:hover,
+.offer-card__link:focus {
+  .offer-card__overlay {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  display: block;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}

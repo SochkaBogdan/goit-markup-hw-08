@@ -40,6 +40,9 @@
     gap: 10px;
     display: flex;
     align-items: center;
+    transition: color (var(--main-anim), fill var(--main-anim));
+    transition-property: color, fill;
+
     &:hover,
     &:focus {
       color: var(--accent-color);
@@ -55,35 +58,40 @@
     letter-spacing: 0.02em;
     color: var(--main-text-color);
     fill: var(--main-text-color);
-    transition: var(--main-anim);
-    -webkit-transition: var(--main-anim);
+    transition: color var(--main-anim);
+    transition-property: color;
+
     &:hover,
     &:focus {
       color: var(--accent-color);
-      // fill: var(--accent-color);
     }
   }
   &___icon {
     margin-right: 10px;
-    transition: var(--main-anim);
-    &:hover {
-      color: var(--accent-color);
-    }
+    transition: color var(--main-anim);
+    transition-property: color;
+  }
+
+  &:hover {
+    color: var(--accent-color);
   }
 }
+
 .header__contact-list .header__contacts:hover .header__icon,
 .header__contact-list .header__contacts:focus .header__icon {
   fill: var(--accent-color);
 }
 
 .header {
-  // .header__burger-btn
-
   &__burger-btn {
     padding: 12px 8px;
     background-color: transparent;
     cursor: pointer;
     display: none;
+    transition: fill var(--slow-anim);
+    &:hover {
+      fill: var(--accent-color);
+    }
 
     @media (min-width: 768px) {
       display: none;
@@ -91,5 +99,18 @@
     @media (max-width: 767px) {
       display: block;
     }
+  }
+}
+
+.header__icon--email {
+  @media (min-width: 1200px) {
+    width: 16px;
+    height: 12px;
+  }
+}
+.header__icon--tel {
+  @media (min-width: 1200px) {
+    width: 10px;
+    height: 16px;
   }
 }

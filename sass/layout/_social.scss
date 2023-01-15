@@ -10,17 +10,18 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    transition: var(--main-anim);
+    transition: background var(--main-anim), filter var(--main-anim);
+    transition-property: background, filter;
   }
   &__icons {
-    transition: var(--main-anim);
+    transition: fill var(--main-anim);
+    transition-property: fill;
+    fill: #afb1b8;
   }
 }
-.social-list__icons--team{
-    fill: #afb1b8;
-}
+
 .social-list__icons--footer {
-fill: #ffffff;
+  fill: #ffffff;
 }
 .social-list__link--footer {
   background: rgba(255, 255, 255, 0.1);

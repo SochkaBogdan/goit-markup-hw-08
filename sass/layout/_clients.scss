@@ -3,9 +3,7 @@
   
   @media (min-width: 1200px){
   padding: 94px 0;
-
 }
-
 }
 
 .clients-list {
@@ -13,12 +11,12 @@
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
-  // .clients-list__card
 
   &__card {
     border: 1px solid #afb1b8;
     border-radius: 4px;
-    transition: var(--main-anim);
+    transition: border var(--main-anim);
+    transition-property: border;
     &:hover {
       border: 1px solid #2196f3;
     }
@@ -35,8 +33,6 @@
 
   }
 
-  // .clients-list__link
-
   &__link {
     display: flex;
     justify-content: center;
@@ -44,16 +40,13 @@
     height: 92px;
     transition: var(--main-anim);
   }
-
-  // .clients-list__icon
-
   &__icon {
     fill: #afb1b8;
-    transition: var(--main-anim);
+    transition: fill var(--main-anim);
+    transition-property: fill;
   }
 }
 .clients-list__link:hover .clients-list__icon,
 .clients-list__link:focus .clients-list__icon {
   fill: #2196f3;
-  border-radius: 4px;
 }

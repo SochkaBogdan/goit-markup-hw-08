@@ -102,7 +102,7 @@
     color: var(--secondary-color);
     border: #2196f3;
     cursor: pointer;
-    transition: var(--main-anim);
+    transition: border var(--main-anim), background var(--main-anim) ;
     &:hover {
       border: #188ce8;
       background: #188ce8;
