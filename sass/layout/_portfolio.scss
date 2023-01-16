@@ -4,13 +4,24 @@
   height: 0px;
 }
 .portfolio {
-  padding-bottom: 94px;
-  padding-top: 94px;
+
+  padding: 60px 0;
+
+  @media (min-width: 1200px){
+    padding: 94px 0;
+  }
+
 }
 .pf-btn {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 8px;
+  
+  @media (min-width: 768px){
+    justify-content: center;
+  }
+
+
   &__button {
     cursor: pointer;
     padding: 6px 25px;
@@ -55,11 +66,22 @@
   gap: 30px;
   padding: 0;
   &__box {
-    width: 370px;
+    // width: 100%;
+
+    // flex-basis: 1;
+
+    @media (min-width: 768px) {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+    @media (min-width: 1200px){
+      flex-basis: calc((100% - 60px) / 3);
+    }
   }
 
   &__link {
-    display: block;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   &__img {
     position: relative;
@@ -69,6 +91,7 @@
     border: 1px solid #eeeeee;
     border-top: none;
     padding: 20px 24px;
+    flex-grow: 1;
   }
   &__tittle {
     font-weight: 700;
