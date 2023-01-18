@@ -161,6 +161,17 @@ img {
   width: 450px;
   height: 609px;
 }
+@media (max-width: 479px) {
+  .modal {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+}
 .modal__close-btn {
   position: absolute;
   top: 8px;
@@ -182,17 +193,6 @@ img {
   cursor: pointer;
   -webkit-transition: var(--main-anim);
   transition: var(--main-anim);
-}
-@media (max-width: 479px) {
-  .modal {
-    width: 100%;
-  }
-}
-@media (min-width: 1200px) {
-  .modal {
-    width: 528px;
-    height: 581px;
-  }
 }
 
 .modal__close-btn:hover .modal__close-icon,
@@ -1610,14 +1610,14 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
 .offer-card__img {
   position: relative;
   overflow: hidden;
 }
 .offer-card__description {
-  border: 1px solid #eeeeee;
-  border-top: none;
   padding: 20px 24px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;

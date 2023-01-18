@@ -66,9 +66,6 @@
   gap: 30px;
   padding: 0;
   &__box {
-    // width: 100%;
-
-    // flex-basis: 1;
 
     @media (min-width: 768px) {
       flex-basis: calc((100% - 30px) / 2);
@@ -82,14 +79,14 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    border: 1px solid #eeeeee;
+    border-top: none;
   }
   &__img {
     position: relative;
     overflow: hidden;
   }
   &__description {
-    border: 1px solid #eeeeee;
-    border-top: none;
     padding: 20px 24px;
     flex-grow: 1;
   }
